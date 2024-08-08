@@ -4,14 +4,17 @@ import axios from "axios";
 export default function Form() {
 
 const[city,setCity] = useState("");
-useEffect(
-    () => console.log(city),[city]);
+
+useEffect(() => {
+    console.log(city);
+  }, [city]);
 
 
 
 const handleChange = () => {
     const api = "a05111fbb42dec53624eeb301218204a";
-    const baseURL =`https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}`;
+    const baseURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=tr&appid=${api}&units=metric`;
+
     axios(baseURL).then(data => console.log(data));
 }
 
