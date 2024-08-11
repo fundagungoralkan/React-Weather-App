@@ -6,9 +6,10 @@ import './components/style.css'
 
 function App() {
   const [info,setInfo] = useState([]);
+  
   return (
     <div>
-    <Form  info = {info}  setInfo = {setInfo} />
+    <Form  setInfo = {setInfo} />
     <Info info = {info} />
     </div>
   );

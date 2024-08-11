@@ -1,7 +1,7 @@
 import {useState} from "react";
 import axios from "axios";
 
-export default function Form({info,setInfo}) {
+export default function Form({setInfo}) {
 
 const[city,setCity] = useState("");
 
@@ -22,7 +22,7 @@ return(
 <h1>Hava Durumu</h1>
 <form onSubmit={(e) => {e.preventDefault(); handleChange()}}>
 <div className="form">
-    <input  onChange={(e) => setCity(e.target.value)}  className="inputText" type="text" placeholder="Şehri Giriniz" />
+    <input value={city} onChange={(e) => setCity(e.target.value)}  className="inputText" type="text" placeholder="Şehri Giriniz" />
 </div>
 
 <div className="btnDiv">
