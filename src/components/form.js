@@ -19,15 +19,15 @@ const handleChange = () => {
 
 return(
 <div>
-<h1>Hava Durumu</h1>
+<h1>Weather</h1>
 <form onSubmit={(e) => {e.preventDefault(); handleChange()}}>
 <div className="form">
-    <input value={city} onChange={(e) => setCity(e.target.value)}  className="inputText" type="text" placeholder="Şehri Giriniz" />
+    <input value={city} onChange={(e) => setCity(e.target.value)}  className="inputText" type="text" placeholder="Enter the city" />
 </div>
 
 <div className="btnDiv">
 <button type="submit" className="btn">
-Verileri Getir
+Click
 </button>
 </div>
 </form>
